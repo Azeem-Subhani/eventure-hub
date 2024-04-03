@@ -45,7 +45,7 @@ function ToolbarLayout1(props: ToolbarLayout1Props) {
 				}}
 				position="static"
 			>
-				<Toolbar className="min-h-48 p-0 md:min-h-64">
+				<Toolbar className="min-h-48 p-0 md:min-h-64 flex justify-end">
 					<div className="flex flex-1 px-16">
 						{config.navbar.display && config.navbar.position === 'left' && (
 							<>
@@ -65,16 +65,16 @@ function ToolbarLayout1(props: ToolbarLayout1Props) {
 							</>
 						)}
 
-						<Hidden lgDown>
+						{/* <Hidden lgDown>
 							<NavigationShortcuts />
-						</Hidden>
+						</Hidden> */}
 					</div>
 
 					<div className="flex h-full items-center overflow-x-auto px-8">
-						<LanguageSwitcher />
+						{/* <LanguageSwitcher /> */}
 						<AdjustFontSize />
 						<FullScreenToggle />
-						<NavigationSearch />
+						{/* <NavigationSearch /> */}
 						<QuickPanelToggleButton />
 						<NotificationPanelToggleButton />
 						<UserMenu />

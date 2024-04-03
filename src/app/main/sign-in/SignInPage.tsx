@@ -18,6 +18,7 @@ import Paper from '@mui/material/Paper';
 import { useEffect } from 'react';
 import { UserType } from 'app/store/user';
 import jwtService from '../../auth/services/jwtService';
+import Logo from 'app/theme-layouts/shared-components/Logo';
 
 /**
  * Form Validation Schema
@@ -50,7 +51,7 @@ function SignInPage() {
 	const { isValid, dirtyFields, errors } = formState;
 
 	useEffect(() => {
-		setValue('email', 'admin@fusetheme.com', { shouldDirty: true, shouldValidate: true });
+		setValue('email', 'admin@eventure.hub', { shouldDirty: true, shouldValidate: true });
 		setValue('password', 'admin', { shouldDirty: true, shouldValidate: true });
 	}, [setValue]);
 
@@ -60,7 +61,6 @@ function SignInPage() {
 			.then((user: UserType) => {
 				// eslint-disable-next-line no-console
 				console.info(user);
-
 				// No need to do anything, user data will be set at app/auth/AuthContext
 			})
 			.catch((_errors: { type: 'email' | 'password' | `root.${string}` | 'root'; message: string }[]) => {
@@ -77,12 +77,7 @@ function SignInPage() {
 		<div className="flex min-w-0 flex-1 flex-col items-center sm:flex-row sm:justify-center md:items-start md:justify-start">
 			<Paper className="h-full w-full px-16 py-8 ltr:border-r-1 rtl:border-l-1 sm:h-auto sm:w-auto sm:rounded-2xl sm:p-48 sm:shadow md:flex md:h-full md:w-1/2 md:items-center md:justify-end md:rounded-none md:p-64 md:shadow-none">
 				<div className="mx-auto w-full max-w-320 sm:mx-0 sm:w-320">
-					<img
-						className="w-48"
-						src="assets/images/logo/logo.svg"
-						alt="logo"
-					/>
-
+					<Logo classes='w-48 h-48 text-gray-800' />
 					<Typography className="mt-32 text-4xl font-extrabold leading-tight tracking-tight">
 						Sign in
 					</Typography>
@@ -177,53 +172,6 @@ function SignInPage() {
 						>
 							Sign in
 						</Button>
-
-						<div className="mt-32 flex items-center">
-							<div className="mt-px flex-auto border-t" />
-							<Typography
-								className="mx-8"
-								color="text.secondary"
-							>
-								Or continue with
-							</Typography>
-							<div className="mt-px flex-auto border-t" />
-						</div>
-
-						<div className="mt-32 flex items-center space-x-16">
-							<Button
-								variant="outlined"
-								className="flex-auto"
-							>
-								<FuseSvgIcon
-									size={20}
-									color="action"
-								>
-									feather:facebook
-								</FuseSvgIcon>
-							</Button>
-							<Button
-								variant="outlined"
-								className="flex-auto"
-							>
-								<FuseSvgIcon
-									size={20}
-									color="action"
-								>
-									feather:twitter
-								</FuseSvgIcon>
-							</Button>
-							<Button
-								variant="outlined"
-								className="flex-auto"
-							>
-								<FuseSvgIcon
-									size={20}
-									color="action"
-								>
-									feather:github
-								</FuseSvgIcon>
-							</Button>
-						</div>
 					</form>
 				</div>
 			</Paper>
@@ -300,8 +248,7 @@ function SignInPage() {
 						<div>our community</div>
 					</div>
 					<div className="mt-24 text-lg leading-6 tracking-tight text-gray-400">
-						Fuse helps developers to build organized and well coded dashboards full of beautiful and rich
-						modules. Join us and start building your application today.
+					Step into the world of seamless event management with us! Explore our platform where innovation meets organization, empowering planners like you to craft unforgettable experiences.
 					</div>
 					<div className="mt-32 flex items-center">
 						<AvatarGroup
@@ -318,7 +265,7 @@ function SignInPage() {
 						</AvatarGroup>
 
 						<div className="ml-16 font-medium tracking-tight text-gray-400">
-							More than 17k people joined us, it's your turn
+							More than 1k people joined us, it's your turn
 						</div>
 					</div>
 				</div>

@@ -1,45 +1,48 @@
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 
-const Root = styled('div')(({ theme }) => ({
-	'& > .logo-icon': {
-		transition: theme.transitions.create(['width', 'height'], {
-			duration: theme.transitions.duration.shortest,
-			easing: theme.transitions.easing.easeInOut
-		})
-	},
-	'& > .badge': {
-		transition: theme.transitions.create('opacity', {
-			duration: theme.transitions.duration.shortest,
-			easing: theme.transitions.easing.easeInOut
-		})
-	}
+const Root = styled("div")(({ theme }) => ({
+  "& > .logo-icon": {
+    transition: theme.transitions.create(["width", "height"], {
+      duration: theme.transitions.duration.shortest,
+      easing: theme.transitions.easing.easeInOut,
+    }),
+  },
+  "& > .badge": {
+    transition: theme.transitions.create("opacity", {
+      duration: theme.transitions.duration.shortest,
+      easing: theme.transitions.easing.easeInOut,
+    }),
+  },
 }));
+
+// Logo Props
+interface LogoProps{
+	classes?: string
+}
+
 
 /**
  * The logo component.
  */
-function Logo() {
-	return (
-		<Root className="flex items-center">
-			<img
-				className="logo-icon h-32 w-32"
-				src="assets/images/logo/logo.svg"
-				alt="logo"
-			/>
-			<div
-				className="badge mx-8 flex items-center rounded px-8 py-4"
-				style={{ backgroundColor: '#121212', color: '#61DAFB' }}
-			>
-				<img
-					className="react-badge"
-					src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K"
-					alt="react"
-					width="16"
-				/>
-				<span className="react-text mx-4 text-12">React</span>
-			</div>
-		</Root>
-	);
+function Logo({ classes }: LogoProps) {
+  return (
+    <Root className="flex items-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        className={ classes ? classes : "w-24 h-24 text-gray-200"}
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+        />
+      </svg>
+    </Root>
+  );
 }
 
 export default Logo;

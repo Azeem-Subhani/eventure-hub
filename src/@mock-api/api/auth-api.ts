@@ -40,6 +40,7 @@ mock.onGet('/api/auth/sign-in').reply((config) => {
 		});
 	}
 
+	debugger;
 	if (error.length === 0) {
 		delete (user as Partial<UserAuthType>).password;
 

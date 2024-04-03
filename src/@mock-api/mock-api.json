@@ -32652,9 +32652,9 @@
             "password": "admin",
             "role": "admin",
             "data": {
-              "displayName": "Abbott Keitch",
+              "displayName": "Admin",
               "photoURL": "assets/images/avatars/brian-hughes.jpg",
-              "email": "admin@fusetheme.com",
+              "email": "admin@eventure.hub",
               "settings": {
                 "layout": {},
                 "theme": {}

@@ -64,7 +64,7 @@ function Layout1(props: Layout1Props) {
 					)}
 
 					<div className="sticky top-0 z-99">
-						<SettingsPanel />
+						{/* <SettingsPanel /> */}
 					</div>
 
 					<div className="relative z-10 flex min-h-0 flex-auto flex-col">

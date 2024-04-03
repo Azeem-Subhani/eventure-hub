@@ -15,6 +15,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import FormHelperText from '@mui/material/FormHelperText';
 import jwtService from '../../auth/services/jwtService';
+import Logo from 'app/theme-layouts/shared-components/Logo';
 
 /**
  * Form Validation Schema
@@ -71,11 +72,12 @@ function SignUpPage() {
 		<div className="flex min-w-0 flex-1 flex-col items-center sm:flex-row sm:justify-center md:items-start md:justify-start">
 			<Paper className="h-full w-full px-16 py-8 ltr:border-r-1 rtl:border-l-1 sm:h-auto sm:w-auto sm:rounded-2xl sm:p-48 sm:shadow md:flex md:h-full md:w-1/2 md:items-center md:justify-end md:rounded-none md:p-64 md:shadow-none">
 				<div className="mx-auto w-full max-w-320 sm:mx-0 sm:w-320">
-					<img
+					{/* <img
 						className="w-48"
 						src="assets/images/logo/logo.svg"
 						alt="logo"
-					/>
+					/> */}
+					<Logo classes='w-48 h-48 text-gray-800' />
 
 					<Typography className="mt-32 text-4xl font-extrabold leading-tight tracking-tight">
 						Sign up
@@ -278,8 +280,7 @@ function SignUpPage() {
 						<div>our community</div>
 					</div>
 					<div className="mt-24 text-lg leading-6 tracking-tight text-gray-400">
-						Fuse helps developers to build organized and well coded dashboards full of beautiful and rich
-						modules. Join us and start building your application today.
+					Explore our platform where innovation meets organization, empowering planners like you to craft unforgettable experiences.
 					</div>
 					<div className="mt-32 flex items-center">
 						<AvatarGroup
@@ -296,7 +297,7 @@ function SignUpPage() {
 						</AvatarGroup>
 
 						<div className="ml-16 font-medium tracking-tight text-gray-400">
-							More than 17k people joined us, it's your turn
+							More than 1k people joined us, it's your turn
 						</div>
 					</div>
 				</div>
