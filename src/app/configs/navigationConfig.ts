@@ -19,7 +19,31 @@ const navigationConfig: FuseNavigationType = [
 		type: 'item',
 		icon: 'heroicons-outline:star',
 		url: 'example'
-	}
+	},
+	{
+		id: 'overview-component',
+		title: 'Overview',
+		translate: 'Overview',
+		type: 'item',
+		icon: 'heroicons-outline:sparkles',
+		url: 'dashboard'
+	},
+	{
+		id: 'event-component',
+		title: 'Events',
+		translate: 'Events',
+		type: 'item',
+		icon: 'heroicons-outline:gift',
+		url: 'event'
+	},
+	{
+		id: 'users-component',
+		title: 'Users',
+		translate: 'Users',
+		type: 'item',
+		icon: 'heroicons-outline:users',
+		url: 'users'
+	},
 ];
 
 export default navigationConfig;
