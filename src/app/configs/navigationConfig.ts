@@ -34,7 +34,7 @@ const navigationConfig: FuseNavigationType = [
 		translate: 'Events',
 		type: 'item',
 		icon: 'heroicons-outline:gift',
-		url: 'event'
+		url: 'events'
 	},
 	{
 		id: 'users-component',
